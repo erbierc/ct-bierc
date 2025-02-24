@@ -1,13 +1,7 @@
 
-import { Button, Card, Container, createStyles, Fab, makeStyles, TextField, Theme, Typography } from '@material-ui/core'
+import { Button, Card, Container, createStyles, makeStyles, TextField, Theme, Typography } from '@material-ui/core'
 import '../App.css'
-import Ad from '../components/Ad';
-import AddIcon from '@material-ui/icons/Add';
-import { useState } from 'react';
-import { useLiveQuery } from 'dexie-react-hooks';
 import { AdType, db } from '../db';
-import AdModal from '../components/AdModal';
-import { Link } from 'react-router-dom';
 import { SubmitHandler, useForm } from 'react-hook-form';
   
 const useStyles = makeStyles((theme: Theme) =>
@@ -56,7 +50,7 @@ export default function NewAd() {
                 startDate: data.startDate,
                 endDate: data.endDate
             })
-            alert("Ad successfully added!");
+            alert("Ad successfully added! Id: " + id);
             reset();
             window.location.href = "/panel"
         } catch (error) {

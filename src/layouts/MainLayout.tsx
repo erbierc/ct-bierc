@@ -2,7 +2,7 @@
 import '../App.css'
 import { useState, useEffect } from "react";
 import { fetchQuote } from '../hooks/quotes';
-import { Container, createStyles, makeStyles, Theme, Typography } from '@material-ui/core';
+import { Container, createStyles, makeStyles, Typography } from '@material-ui/core';
 
 interface Quote {
   quote: string
@@ -10,7 +10,7 @@ interface Quote {
   category: string
 }
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     root: {
       height: "90vh", // Full viewport height

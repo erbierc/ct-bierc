@@ -52,7 +52,6 @@
           register,
           handleSubmit,
           reset,
-          formState: { errors },
       } = useForm<AdType>()
       const onSubmit: SubmitHandler<AdType> = async (data) => {
         if (!props.selectedAd?.id) {
@@ -64,7 +63,7 @@
               endDate: data.endDate
             })
   
-              alert("Ad successfully added!");
+              alert("Ad successfully added! Id: " + id);
               reset(); // Clear form
               props.handleClose(); // Close modal
           } catch (error) {

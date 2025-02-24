@@ -1,8 +1,7 @@
 
-import { useForm, SubmitHandler } from "react-hook-form"
+import { useForm } from "react-hook-form"
 import { Button, Container, createStyles, makeStyles, TextField, Theme, Typography } from '@material-ui/core'
 import '../App.css'
-import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -39,10 +38,7 @@ export default function LoginLayout() {
     const {
       register,
       handleSubmit,
-      watch,
-      formState: { errors },
     } = useForm<{password: string}>()
-    const onSubmit: SubmitHandler<{password: string}> = (data) => console.log(data)
 
     return (
         <Container>

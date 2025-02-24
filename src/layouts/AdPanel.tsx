@@ -1,5 +1,5 @@
 
-import { Button, Container, createStyles, Fab, makeStyles, Theme, Typography } from '@material-ui/core'
+import { Button, Container, createStyles, Fab, makeStyles, Typography } from '@material-ui/core'
 import '../App.css'
 import Ad from '../components/Ad';
 import AddIcon from '@material-ui/icons/Add';
@@ -10,31 +10,31 @@ import AdModal from '../components/AdModal';
 import { Link } from 'react-router-dom';
 
 //Gotowe dane do podpięcia
-const adsTemp = [
-    {
-      id: 1,
-      name: "Super Sale Ad",
-      content: "Huge discounts on all items! Limited time offer.",
-      startDate: new Date("2024-03-01"),
-      endDate: new Date("2024-03-15"),
-    },
-    {
-      id: 2,
-      name: "New Arrival Ad",
-      content: "Check out our latest collection of summer fashion.",
-      startDate: new Date("2024-04-01"),
-      endDate: new Date("2024-04-30"),
-    },
-    {
-      id: 3,
-      name: "Tech Expo Ad",
-      content: "Join us for the biggest tech expo of the year!",
-      startDate: new Date("2024-05-10"),
-      endDate: new Date("2024-05-12"),
-    },
-  ];
+// const adsTemp = [
+//     {
+//       id: 1,
+//       name: "Super Sale Ad",
+//       content: "Huge discounts on all items! Limited time offer.",
+//       startDate: new Date("2024-03-01"),
+//       endDate: new Date("2024-03-15"),
+//     },
+//     {
+//       id: 2,
+//       name: "New Arrival Ad",
+//       content: "Check out our latest collection of summer fashion.",
+//       startDate: new Date("2024-04-01"),
+//       endDate: new Date("2024-04-30"),
+//     },
+//     {
+//       id: 3,
+//       name: "Tech Expo Ad",
+//       content: "Join us for the biggest tech expo of the year!",
+//       startDate: new Date("2024-05-10"),
+//       endDate: new Date("2024-05-12"),
+//     },
+//   ];
   
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
     createStyles({
         buttonDiv: {
             display: 'flex',

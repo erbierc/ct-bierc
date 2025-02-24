@@ -1,10 +1,10 @@
 
 import '../App.css'
-import { Container, createStyles, makeStyles, Theme, Typography } from '@material-ui/core';
+import { Container, createStyles, makeStyles, Typography } from '@material-ui/core';
 import ErrorIcon from '@material-ui/icons/Error';
 import { Link } from 'react-router-dom';
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     root: {
       height: "90vh", // Full viewport height
