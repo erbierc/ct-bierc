@@ -25,7 +25,7 @@ export default function NoMatch() {
         <Container className={classes.root}>
             <ErrorIcon fontSize='large' />
             <Typography variant="h3">
-                Error 404. <Link to="/ct-bierc">Go back.</Link>
+                Error 404. <Link to="/">Go back.</Link>
             </Typography>
         </Container>
     )

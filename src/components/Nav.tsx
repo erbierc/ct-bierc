@@ -35,7 +35,7 @@ export default function Nav() {
         <Toolbar>
           <CloudCircleIcon /> 
             <Typography variant="h6" className={classes.title}>
-                <Link to="/ct-bierc">
+                <Link to="/">
                     CT Ad Management Panel
                 </Link>
             </Typography>

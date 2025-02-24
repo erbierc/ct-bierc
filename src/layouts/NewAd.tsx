@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function NewAd() {
     // Sprawdzenie, czy użytkownik jest zalogowany
     if (!localStorage.getItem('loggedIn'))
-        window.location.href = "/ct-bierc"
+        window.location.href = "/"
 
     const classes = useStyles();
 

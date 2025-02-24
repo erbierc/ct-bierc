@@ -53,7 +53,7 @@ const useStyles = makeStyles(() =>
 export default function AdPanel() {
     // Sprawdzenie, czy użytkownik jest zalogowany
     if (!localStorage.getItem('loggedIn'))
-        window.location.href = "/ct-bierc"
+        window.location.href = "/"
 
     const [open, setOpen] = useState(false) // Otwieranie modalu kreacji/edycji reklam
     const [selectedAd, setSelectedAd] = useState<AdType | null>(null); // Reklama wybrana do edycji
