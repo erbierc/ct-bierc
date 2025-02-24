@@ -6,7 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import CloudCircleIcon from '@material-ui/icons/CloudCircle';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import { Link } from 'react-router-dom';
-import { Icon, Tooltip } from '@material-ui/core';
+import { Tooltip } from '@material-ui/core';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 const useStyles = makeStyles((theme: Theme) =>
