@@ -25,7 +25,10 @@ const useStyles = makeStyles((theme: Theme) =>
         },
       },
       title: {
-        margin: '1rem'
+        margin: '1rem',
+        [theme.breakpoints.down('sm')]: {
+          fontSize: '2rem'
+        }
       }
     }),
   );

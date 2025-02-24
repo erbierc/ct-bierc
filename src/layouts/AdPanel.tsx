@@ -1,5 +1,5 @@
 
-import { Button, Container, createStyles, Fab, makeStyles, Typography } from '@material-ui/core'
+import { Button, Container, createStyles, Fab, makeStyles, Theme, Typography } from '@material-ui/core'
 import '../App.css'
 import Ad from '../components/Ad';
 import AddIcon from '@material-ui/icons/Add';
@@ -34,17 +34,23 @@ const adsTemp = [
     },
   ];
   
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         buttonDiv: {
             display: 'flex',
             flexDirection: 'row',
             gap: '1rem',
             justifyContent: 'center',
-            margin: '1rem'
+            margin: '1rem',
+            [theme.breakpoints.down('sm')]: {
+                flexDirection: 'column'
+            }
         },
         title: {
             marginTop: '1rem'
+        },
+        fab: {
+            margin: 'auto'
         }
     })
 );
@@ -94,7 +100,7 @@ export default function AdPanel() {
             </Typography>
             <div className={classes.buttonDiv}>
                 {/* Kreacja nowych reklam za pomocą modala */}
-                <Fab color='primary' size="small" onClick={() => handleAddNewAd()}>
+                <Fab color='primary' size="small" onClick={() => handleAddNewAd()} className={classes.fab}>
                     <AddIcon/>
                 </Fab>
                 <Link to="/panel/add">

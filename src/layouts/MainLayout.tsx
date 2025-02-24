@@ -2,7 +2,7 @@
 import '../App.css'
 import { useState, useEffect } from "react";
 import { fetchQuote } from '../hooks/quotes';
-import { Container, createStyles, makeStyles, Typography } from '@material-ui/core';
+import { Container, createStyles, makeStyles, Theme, Typography } from '@material-ui/core';
 
 interface Quote {
   quote: string
@@ -10,18 +10,23 @@ interface Quote {
   category: string
 }
 
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      height: "90vh", // Full viewport height
+      minHeight: "90vh",
       display: "flex",
       flexDirection: "column",
-      justifyContent: "center", // Centers content vertically
-      alignItems: "center", // Centers content horizontally
-      textAlign: "center", // Ensures text is centered
+      justifyContent: "center",
+      alignItems: "center",
+      textAlign: "center",
     },
     author: {
       marginTop: '1rem'
+    },
+    quote: {
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '2rem'
+      }
     }
   })
 );
@@ -44,7 +49,7 @@ export default function MainLayout() {
   console.log("main: ", quote)
   return (
     <Container className={classes.root}>
-        <Typography variant="h3">
+        <Typography variant="h3" className={classes.quote}>
           {quote?.quote ? quote.quote : "It always seems impossible until it's done."}
         </Typography>
         <Typography variant="h6" className={classes.author}>

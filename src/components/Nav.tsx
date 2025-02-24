@@ -18,7 +18,10 @@ const useStyles = makeStyles((theme: Theme) =>
       marginRight: theme.spacing(2),
     },
     title: {
-      flexGrow: 1
+      flexGrow: 1,
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '1rem'
+      }
     },
   }),
 );
