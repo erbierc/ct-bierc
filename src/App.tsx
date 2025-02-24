@@ -1,6 +1,6 @@
 
 import './App.css'
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import MainLayout from './layouts/MainLayout';
 import LoginLayout from './layouts/LoginLayout';
