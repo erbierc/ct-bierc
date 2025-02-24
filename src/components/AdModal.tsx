@@ -122,6 +122,9 @@
                       type="date"
                       defaultValue={props.selectedAd?.startDate}
                       className={classes.textField}
+                      inputProps={{
+                        min: new Date().toISOString().split("T")[0],
+                      }}
                       InputLabelProps={{
                       shrink: true,
                       }}
@@ -131,7 +134,6 @@
                       id="endDate"
                       label="End date"
                       type="date"
-                      
                       defaultValue={props.selectedAd?.endDate}
                       className={classes.textField}
                       InputLabelProps={{

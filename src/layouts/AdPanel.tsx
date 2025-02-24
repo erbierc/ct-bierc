@@ -15,22 +15,22 @@ const adsTemp = [
       id: 1,
       name: "Super Sale Ad",
       content: "Huge discounts on all items! Limited time offer.",
-      startDate: "2024-03-01",
-      endDate: "2024-03-15",
+      startDate: new Date("2024-03-01"),
+      endDate: new Date("2024-03-15"),
     },
     {
       id: 2,
       name: "New Arrival Ad",
       content: "Check out our latest collection of summer fashion.",
-      startDate: "2024-04-01",
-      endDate: "2024-04-30",
+      startDate: new Date("2024-04-01"),
+      endDate: new Date("2024-04-30"),
     },
     {
       id: 3,
       name: "Tech Expo Ad",
       content: "Join us for the biggest tech expo of the year!",
-      startDate: "2024-05-10",
-      endDate: "2024-05-12",
+      startDate: new Date("2024-05-10"),
+      endDate: new Date("2024-05-12"),
     },
   ];
   

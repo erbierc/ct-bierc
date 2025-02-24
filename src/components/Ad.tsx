@@ -47,7 +47,7 @@ export default function Ad(props: Props) {
       <CardContent>
         {props.ad.startDate && props.ad.endDate &&
           <Typography className={classes.title} color="textSecondary" gutterBottom>
-            {props.ad.startDate} - {props.ad.endDate}
+            {new Date(props.ad.startDate).toLocaleDateString()} - {new Date(props.ad.endDate).toLocaleDateString()}
           </Typography>
         }
         
