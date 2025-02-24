@@ -1,4 +1,5 @@
-// Pobieranie cytatów z API
+// Pobieranie cytatów z API. Żeby uniknąć ciągłego pobierania cytatów, jeden zawsze będzie w localStorage.
+// W prawdziwej aplikacji dodałabym jeszcze limit czasowy, żeby nie był to tylko jeden cytat.
 export async function fetchQuote() {
     const storage = localStorage.getItem('quote');
     if (storage) return JSON.parse(storage)
