@@ -10,29 +10,29 @@ import AdModal from '../components/AdModal';
 import { Link } from 'react-router-dom';
 
 //Gotowe dane do podpięcia
-// const adsTemp = [
-//     {
-//       id: 1,
-//       name: "Super Sale Ad",
-//       content: "Huge discounts on all items! Limited time offer.",
-//       startDate: new Date("2024-03-01"),
-//       endDate: new Date("2024-03-15"),
-//     },
-//     {
-//       id: 2,
-//       name: "New Arrival Ad",
-//       content: "Check out our latest collection of summer fashion.",
-//       startDate: new Date("2024-04-01"),
-//       endDate: new Date("2024-04-30"),
-//     },
-//     {
-//       id: 3,
-//       name: "Tech Expo Ad",
-//       content: "Join us for the biggest tech expo of the year!",
-//       startDate: new Date("2024-05-10"),
-//       endDate: new Date("2024-05-12"),
-//     },
-//   ];
+const adsTemp = [
+    {
+      id: 1,
+      name: "Super Sale Ad",
+      content: "Huge discounts on all items! Limited time offer.",
+      startDate: "2024-03-01",
+      endDate: "2024-03-15",
+    },
+    {
+      id: 2,
+      name: "New Arrival Ad",
+      content: "Check out our latest collection of summer fashion.",
+      startDate: "2024-04-01",
+      endDate: "2024-04-30",
+    },
+    {
+      id: 3,
+      name: "Tech Expo Ad",
+      content: "Join us for the biggest tech expo of the year!",
+      startDate: "2024-05-10",
+      endDate: "2024-05-12",
+    },
+  ];
   
 const useStyles = makeStyles(() =>
     createStyles({
@@ -76,6 +76,17 @@ export default function AdPanel() {
         setSelectedAd(null);
     };
 
+    const addExemplaryData = async () => {
+        try {
+            await db.ads.clear()
+            await db.ads.bulkAdd(adsTemp)
+            alert("Exemplary data added.")
+        } catch (error) {
+            alert("Something went wrong!")
+            console.error(error)
+        }
+    }
+
     return (
         <Container>
             <Typography variant="h5" className={classes.title}>
@@ -91,7 +102,7 @@ export default function AdPanel() {
                         Add from new window
                     </Button>
                 </Link>
-                <Button variant='contained' color='primary'>
+                <Button onClick={addExemplaryData} variant='contained' color='primary'>
                     Load exemplary data
                 </Button>
             </div>

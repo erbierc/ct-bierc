@@ -20,6 +20,9 @@ const useStyles = makeStyles(() =>
       alignItems: "center", // Centers content horizontally
       textAlign: "center", // Ensures text is centered
     },
+    author: {
+      marginTop: '1rem'
+    }
   })
 );
 
@@ -44,7 +47,7 @@ export default function MainLayout() {
         <Typography variant="h3">
           {quote?.quote ? quote.quote : "It always seems impossible until it's done."}
         </Typography>
-        <Typography variant="h6">
+        <Typography variant="h6" className={classes.author}>
           {quote?.author ? quote.author : "Nelson Mandela"}
         </Typography>
     </Container>
