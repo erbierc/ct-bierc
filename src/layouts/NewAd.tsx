@@ -52,7 +52,7 @@ export default function NewAd() {
             })
             alert("Ad successfully added! Id: " + id);
             reset();
-            window.location.href = "/panel"
+            window.location.href = "/ct-bierc/panel"
         } catch (error) {
             console.error("Error adding ad:", error);
         }    

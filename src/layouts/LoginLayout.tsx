@@ -48,7 +48,7 @@ export default function LoginLayout() {
             <form className={classes.root} id="login-form" noValidate autoComplete="off" onSubmit={handleSubmit((data) => {
               if (data.password == import.meta.env.VITE_APP_PASS) {
                 localStorage.setItem('loggedIn', 'true') 
-                window.location.href = "/panel"
+                window.location.href = "/ct-bierc/panel"
               } else
                 window.location.href = "/ct-bierc/error"
             })}>
