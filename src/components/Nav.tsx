@@ -26,8 +26,8 @@ export default function Nav() {
   const classes = useStyles();
   let url = ""
   if (localStorage.getItem('loggedIn'))
-    url = "/ct-bierc/panel"
-  else url = "/ct-bierc/login"
+    url = "/panel"
+  else url = "/login"
 
   return (
     <div className={classes.root}>

@@ -27,7 +27,7 @@ function App() {
       {/* Routing */}
       <BrowserRouter>
         <Routes>
-          <Route path="/ct-bierc/" element={<Layout />}>
+          <Route path="/" element={<Layout />}>
             <Route index element={<MainLayout />} />
             <Route path="login" element={<LoginLayout />} />
             <Route path="panel">

@@ -86,7 +86,7 @@ export default function AdPanel() {
                 <Fab color='primary' size="small" onClick={() => handleAddNewAd()}>
                     <AddIcon/>
                 </Fab>
-                <Link to="/ct-bierc/panel/add">
+                <Link to="/panel/add">
                     <Button variant='contained' color='secondary' startIcon={<AddIcon />}>
                         Add from new window
                     </Button>
