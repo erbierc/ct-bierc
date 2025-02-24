@@ -6,7 +6,8 @@ import IconButton from '@material-ui/core/IconButton';
 import CloudCircleIcon from '@material-ui/icons/CloudCircle';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import { Link } from 'react-router-dom';
-import { Tooltip } from '@material-ui/core';
+import { Icon, Tooltip } from '@material-ui/core';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -40,7 +41,7 @@ export default function Nav() {
                 </Link>
             </Typography>
             <div>
-                <Tooltip title="Log in">
+                <Tooltip title="Access panel">
                     <IconButton
                         component={Link}
                         to={url}
@@ -53,6 +54,15 @@ export default function Nav() {
                     </IconButton>
                 </Tooltip>
             </div>
+            {localStorage.getItem('loggedIn') && 
+              <div>
+                <Tooltip title="Log out">
+                  <IconButton onClick={() => {localStorage.removeItem('loggedIn'); window.location.href="/"}}>
+                    <ExitToAppIcon />
+                  </IconButton>
+                </Tooltip>
+              </div>
+            }
         </Toolbar>
       </AppBar>
     </div>
