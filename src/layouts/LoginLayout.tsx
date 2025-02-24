@@ -50,7 +50,7 @@ export default function LoginLayout() {
                 localStorage.setItem('loggedIn', 'true') 
                 window.location.href = "/panel"
               } else
-                window.location.href = "/error"
+                window.location.href = "/ct-bierc/error"
             })}>
                 <TextField
                     {...register("password", { required: true })}
