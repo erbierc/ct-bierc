@@ -1,6 +1,6 @@
 
 import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import MainLayout from './layouts/MainLayout';
 import LoginLayout from './layouts/LoginLayout';
@@ -25,9 +25,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       {/* Routing */}
-      <BrowserRouter>
+      <HashRouter basename="/ct-bierc">
         <Routes>
-          <Route path="/ct-bierc/" element={<Layout />}>
+          <Route path="/" element={<Layout />}>
             <Route index element={<MainLayout />} />
             <Route path="login" element={<LoginLayout />} />
             <Route path="panel">
@@ -37,7 +37,7 @@ function App() {
             <Route path="*" element={<NoMatch/>}/>
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   )
 }
