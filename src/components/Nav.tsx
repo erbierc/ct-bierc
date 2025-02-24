@@ -26,8 +26,8 @@ export default function Nav() {
   const classes = useStyles();
   let url = ""
   if (localStorage.getItem('loggedIn'))
-    url = "/panel"
-  else url = "/"
+    url = "/ct-bierc/panel"
+  else url = "/ct-bierc"
 
   return (
     <div className={classes.root}>
@@ -35,7 +35,7 @@ export default function Nav() {
         <Toolbar>
           <CloudCircleIcon /> 
             <Typography variant="h6" className={classes.title}>
-                <Link to="/">
+                <Link to="/ct-bierc">
                     CT Ad Management Panel
                 </Link>
             </Typography>
